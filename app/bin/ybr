@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+require_relative '../config/environment'
+
+DataAnalyzer.new.call
+
+# idea is to gets company name from user and insert into company=#{company}
+# company = gets.strip.split
+
+# search page link
+# note company = x%20y%20z is format for separating multiple words
+# https://www.linkedin.com/vsearch/p?company=flatiron%20school&openAdvancedForm=true&companyScope=P&locationType=I&countryCode=us&rsid=769761811413923417870&orig=MDYS
