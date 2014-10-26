@@ -5,10 +5,14 @@ class RootController < ApplicationController
     erb :homepage
   end
 
+  get '/index' do
+    redirect 'index.html'
+  end
+
   post '/make-magic' do 
     run_session = LinkedInSession.new
     @s = run_session.work_magic
-    erb :magic_display
+    erb :index
   end
 
   get '/flatiron_circles' do

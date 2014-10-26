@@ -1,9 +1,16 @@
 # Yellow Brick Road
 
-@vaidehijoshi and I built a LinkedIn scraper that compiles alumni information from a specific company.
+Partner: [@vaidehijoshi](https://github.com/vaidehijoshi) 
 
-The original intent was to find all Flatiron School alumni and discover what companies and industries they were employed at. This scraper searches LinkedIn and compiles all relevant job titles, company names, locations, and industries.
+YBR is a LinkedIn scraper that compiles data on the alumni of a specified company.
 
-Basically, we wanted to see what our futures looked like post grad.
+The following information is compiled:
 
-* Limitation: LinkedIn limits profile views to a maximum of 100 profiles.c
+* Job titles
+* New company names
+* Industries
+* Current locations
+
+The original intent of this application was to locate Flatiron School alumni and find out what companies and industries they were now employed at. As a current FS student, I wanted to know what my potential future looked like post-grad.
+
+* Limitation: LinkedIn limits profile views to a maximum of 100 profiles on a Basic LinkedIn account.
