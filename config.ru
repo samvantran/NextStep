@@ -1,4 +1,4 @@
-require './environment'
+require './config/environment.rb'
 require 'pry'
 require 'sinatra'
 

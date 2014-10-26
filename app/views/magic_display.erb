@@ -1,0 +1,29 @@
+<h1>The Flatiron School Alumni</h1>
+
+<h3>Companies</h3>
+<ul>
+  <% @s.sorted_companies.each do |company| %>
+    <li><%= company[1] %> alums work at <%= company[0] %></li>
+  <% end %>
+</ul>
+
+<h3>Titles</h3>
+<ul>
+  <% @s.sorted_titles.each do |title| %>
+    <li> <%= title[1] %> alums work as <%= title[0] %>(s) </li>
+  <% end %>
+</ul>
+
+<h3>Industries</h3>
+<ul>
+  <% @s.sorted_industries.each do |industry| %>
+    <li><%= industry[1] %> alumni are working within the <%= industry[0] %> industry</li>
+  <% end %>
+</ul>
+
+<h3>Locations</h3>
+<ul>
+  <% @s.sorted_locations.each do |location| %>
+    <li> <%= location[1] %> alumni are working in <%= location %> </li>
+  <% end %>  
+</ul>
