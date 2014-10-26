@@ -1,9 +1,21 @@
-# A sample Gemfile
 source "https://rubygems.org"
 
-# gem "rails"
-gem 'nokogiri'
+gem 'activerecord', :require => 'active_record'
+gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
+gem 'sqlite3'
+gem 'sinatra'
+gem 'thin'
+gem 'shotgun'
+#gem 'tux'
 gem 'pry'
-gem 'capybara'
-gem 'poltergeist'
+gem 'rake'
 gem 'rspec'
+gem 'rack-test'
+#gem 'database_cleaner', git: 'https://github.com/bmabey/database_cleaner.git'
+gem 'mechanize'
+gem 'nokogiri'
+gem 'capybara'
+#gem "capybara-webkit"
+gem 'poltergeist'
+# gem 'selenium-webdriver'
+gem 'watir-webdriver'
