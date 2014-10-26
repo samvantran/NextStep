@@ -1,4 +1,4 @@
-require 'capybara/poltergeist'
+# require 'capybara/poltergeist'
 
 class ScrapeDriver < DelegateClass(Capybara::Session)
   CHROME_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) 

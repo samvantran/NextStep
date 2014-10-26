@@ -1,4 +1,4 @@
-require './environment'
+require './config/environment'
 require 'pry'
 require 'sinatra'
 
