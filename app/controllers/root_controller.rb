@@ -12,7 +12,7 @@ class RootController < ApplicationController
   end
 
   get '/flatiron_circles' do
-    erb :flatiron_circles
+    erb :index
   end
 
 end

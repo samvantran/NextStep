@@ -13,7 +13,7 @@ class LinkedInSession
   end
 
   def login_to_linkedin
-    @b = Watir::Browser.new :firefox, :profile => 'default'
+    @b = Watir::Browser.new
     b.goto "https://linkedin.com"
     sleep 2
     b.text_field(:id => 'session_key-login').set 'alrichards80@outlook.com'
