@@ -5,9 +5,15 @@ require 'json'
 require 'uri'
 require 'pry'
 require 'rspec'
-# require 'poltergeist'
+require 'poltergeist'
 require 'capybara'
 require 'capybara/rspec'
+#stuff i found from stackoverflow
+require 'rubygems'
+require 'capybara/dsl'
+require 'capybara/poltergeist'
+
+
 
 
 # Dir[File.join(File.dirname(__FILE__), "../../lib", "*.rb")].each {|f| require f}

@@ -7,3 +7,7 @@ gem 'pry'
 gem 'capybara'
 gem 'poltergeist'
 gem 'rspec'
+
+gem 'rack'
+gem 'sinatra'
+gem 'sinatra-contrib'

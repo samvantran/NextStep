@@ -1,4 +1,8 @@
+Capybara.run_server = false
+Capybara.current_driver = :poltergeist
+
 class Twitter
+include Capybara::DSL
   # belongs_to :user
 
  def get_html_from_twitter
@@ -10,9 +14,10 @@ class Twitter
   end
 
   def login_to_twitter #(session)
-    `open 'https://twitter.com'`
+
+    #`open 'https://twitter.com'`
     session = ScrapeDriver.new
-    session.visit 'https://twitter.com'
+    #session.visit 'https://twitter.com'
     html = session.html
     doc = Nokogiri::HTML(html)
     #session.fill_in 'q', :with => "testing 1 2 3"
