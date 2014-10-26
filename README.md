@@ -6,4 +6,4 @@ The original intent was to find all Flatiron School alumni and discover what com
 
 Basically, we wanted to see what our futures looked like post grad.
 
-* Limitation: LinkedIn limits profile views to a maximum of 100 profiles.
+* Limitation: LinkedIn limits profile views to a maximum of 100 profiles.c
