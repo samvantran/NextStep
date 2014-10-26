@@ -1,7 +1,9 @@
 #!/usr/bin/env ruby
-require_relative '../config/environment'
+require './config/environment.rb'
 
 # DataAnalyzer.new.call
 
-test_session = Twitter.new
-test_session.login_to_twitter
+test_session = LinkedInSession.new
+test_session.work_magic
+
+

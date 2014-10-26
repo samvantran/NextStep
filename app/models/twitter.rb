@@ -9,9 +9,29 @@ class Twitter
     html
   end
 
+# https://www.linkedin.com/vsearch/p?company=flatiron%20school&openAdvancedForm=true&companyScope=P&locationType=I&countryCode=us&rsid=769761811413923417870&orig=MDYS
+# https://www.linkedin.com/vsearch/p?company=flatiron%20school&openAdvancedForm=true&companyScope=P&locationType=I&countryCode=us&rsid=769761811413923417870&orig=MDYS
+
   def login_to_twitter #(session)
-    `open 'https://twitter.com'`
-    session = ScrapeDriver.new
+    #session = Capybara::Session.new(:poltergeist)
+    
+    # login to linkedin
+    agent = Mechanize.new
+    page = agent.get("https://linkedin.com")
+    login_form = page.form("login")
+    login_form.session_key = "alrichards80@outlook.com"
+    login_form.session_password ="appliepies!"
+    sleep 1 + rand(1..10)/50
+    homepage = agent.submit(login_form, login_form.buttons[0])
+
+    # search for flatiron students
+    search_form = homepage.form("commonSearch")
+    search_form.keywords = "flatiron school"
+    search_results = agent.submit(search_form, search_form.buttons[1])
+
+
+    binding.pry
+    session.visit('http://www.google.com')
     session.visit 'https://twitter.com'
     html = session.html
     doc = Nokogiri::HTML(html)
