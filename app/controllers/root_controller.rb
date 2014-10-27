@@ -12,11 +12,7 @@ class RootController < ApplicationController
   post '/make-magic' do 
     run_session = LinkedInSession.new
     @s = run_session.work_magic
-    erb :index
-  end
-
-  get '/flatiron_circles' do
-    erb :index
+    erb :display_magic
   end
 
 end

@@ -19,7 +19,7 @@ Dir[File.join(File.dirname(__FILE__), "../app/models", "*.rb")].each {|f| requir
 Dir[File.join(File.dirname(__FILE__), "../app/controllers", "*.rb")].each {|f| require f}
 Dir[File.join(File.dirname(__FILE__), "../app/views", "*.rb")].each {|f| require f}
 
-# ActiveRecord::Base.establish_connection(
-#   :adapter => "sqlite3",
-#   :database => "db/halloween_#{ENV['SINATRA_ENV']}.sqlite"
-# )
+ActiveRecord::Base.establish_connection(
+  :adapter => "sqlite3",
+  :database => "db/linkedin_#{ENV['SINATRA_ENV']}.sqlite"
+)

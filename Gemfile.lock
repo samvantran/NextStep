@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/bmabey/database_cleaner.git
+  revision: 84cabcaa4f8b4682cea1bf4cd1cb137f9eaececc
+  specs:
+    database_cleaner (1.3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -16,6 +22,7 @@ GEM
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
     backports (3.6.3)
+    bond (0.5.1)
     builder (3.2.2)
     capybara (2.4.4)
       mime-types (>= 1.16)
@@ -49,6 +56,14 @@ GEM
     rack-test (0.6.2)
       rack (>= 1.0)
     rake (10.3.2)
+    ripl (0.7.1)
+      bond (~> 0.5.1)
+    ripl-multi_line (0.3.1)
+      ripl (>= 0.3.6)
+    ripl-rack (0.2.1)
+      rack (>= 1.0)
+      rack-test (~> 0.6.2)
+      ripl (>= 0.7.0)
     rspec (3.1.0)
       rspec-core (~> 3.1.0)
       rspec-expectations (~> 3.1.0)
@@ -91,6 +106,11 @@ GEM
       rack (~> 1.0)
     thread_safe (0.3.4)
     tilt (1.4.1)
+    tux (0.3.0)
+      ripl (>= 0.3.5)
+      ripl-multi_line (>= 0.2.4)
+      ripl-rack (>= 0.2.0)
+      sinatra (>= 1.2.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     watir-webdriver (0.6.11)
@@ -105,6 +125,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   capybara
+  database_cleaner!
   nokogiri
   pry
   rack
@@ -117,4 +138,5 @@ DEPENDENCIES
   sinatra-contrib
   sqlite3
   thin
+  tux
   watir-webdriver
