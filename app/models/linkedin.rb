@@ -1,7 +1,6 @@
-
 require './config/environment.rb'
 
-class LinkedInSession
+class LinkedInSession 
   attr_reader :b, :s
 
   def work_magic
@@ -9,7 +8,6 @@ class LinkedInSession
     search_for_alumni
     scrape_for_gold
     sort_data
-    # binding.pry
   end
 
   def login_to_linkedin
@@ -19,7 +17,7 @@ class LinkedInSession
     b.text_field(:id => 'session_key-login').set 'alrichards80@outlook.com'
     b.text_field(:id => 'session_password-login').set 'applepies!'
     sleep 1 + rand(1..10)/50
-    b.input(:id => 'signin').click      # and we're in!
+    b.input(:id => 'signin').click
   end
 
   def search_for_alumni(company = "The Flatiron School")
