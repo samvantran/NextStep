@@ -548,26 +548,10 @@
                   function drawChart() {
 
                     var data = google.visualization.arrayToDataTable([
-                      ['Industry', 'Hours per Day'],
-                      ['Computer Software',     27],
-                      ['Information Technology and Services',     7],
-                      ['Internet', 42],
-                      ['Research',      1],
-                      ['Retail',  1],
-                      ['Design', 1],
-                      ['Education Management',    4],
-                      ['Online Media', 3],
-                      ['Translation and Localization', 1],
-                      ['Program Development', 1],
-                      ['Financial Services', 2],
-                      ['Fine Art', 1],
-                      ['Marketing and Advertising', 2],
-                      ['Pharmaceuticals', 1],
-                      ['Broadcast Media', 1],
-                      ['Hospital & Health Care', 1],
-                      ['Law Practice', 1],
-                      ['Staffing and Recruiting', 1],
-                      ['Writing and Editing', 1]
+                      ['Industry', 'Number of Alumni'],
+                      <% @s.industries.each do |industry| %>
+                      <%= industry %>,
+                      <% end %>
                     ]);
 
                     var options = {
