@@ -4,6 +4,8 @@ Bundler.require
 require 'watir-webdriver'
 require 'nokogiri'
 require 'open-uri'
+require 'sinatra'
+require 'sinatra/assetpack'
 require 'json'
 require 'uri'
 require 'pry'

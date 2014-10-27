@@ -1,7 +1,6 @@
-
 require './config/environment.rb'
 
-class LinkedInSession
+class LinkedInSession 
   attr_reader :b, :s
 
   def work_magic

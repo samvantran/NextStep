@@ -1,24 +1,17 @@
 class RootController < ApplicationController
   
-  resources :index
-
   get '/' do
-    # erb :index
     erb :homepage
   end
 
-  get '/index' do
-    # index.html.erb why you no load????
-  end
-
-  get '/index.html' do
-    erb :index
+  get '/test' do
+    erb :"display_magic.html"
   end
 
   post '/make-magic' do 
     run_session = LinkedInSession.new
     @s = run_session.work_magic
-    erb :display_magic
+    erb :"display_magic.html"
   end
 
 end

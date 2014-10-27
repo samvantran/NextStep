@@ -1,6 +1,7 @@
 require './config/environment.rb'
 
 class InfoScraper
+
   attr_accessor :titles, :companies, :industries, :locations
   attr_reader :sorted_titles, :sorted_companies, :sorted_industries, :sorted_locations
 

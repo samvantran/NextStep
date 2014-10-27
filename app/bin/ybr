@@ -1,9 +1,0 @@
-#!/usr/bin/env ruby
-require './config/environment.rb'
-
-# DataAnalyzer.new.call
-
-test_session = LinkedInSession.new
-test_session.work_magic
-
-
