@@ -9,7 +9,7 @@ class RootController < ApplicationController
     erb :"display_magic.html"
   end
 
-  post '/make-magic' do 
+  get '/make-magic' do 
     run_session = LinkedInSession.new
     @s = run_session.work_magic
     erb :"display_magic.html"

@@ -355,9 +355,6 @@
 
     }
 
-
-
-
     /*
      * -- DESKTOP (AND UP) MEDIA QUERIES --
      * On desktops and other large devices, we want to over-ride some
@@ -583,7 +580,7 @@
                 function drawChart() {
                   var data = google.visualization.arrayToDataTable([
                     ['Job Title', 'Number of Alumni', { role: 'style' }],
-                    <% @s.titles[0..9].each do |title| %>
+                    <% @s.sorted_titles[0..9].each do |title| %>
                       <%= [title[0], title[1], 'color: #1f8dd6'] %>,
                     <% end %>
                     ]);
@@ -608,47 +605,47 @@
                   <div class="table">
                   <table style="width:100%">
                     <tr>
-                      <%@s.companies[0..2].each do |company| %>
+                      <%@s.sorted_companies[0..2].each do |company| %>
                         <td><%=company[0]%></td>
                       <%end%>
                     </tr>
                     <tr>
-                      <%@s.companies[3..5].each do |company| %>
+                      <%@s.sorted_companies[3..5].each do |company| %>
                         <td><%=company[0]%></td>
                       <%end%>
                     </tr>
                     <tr>
-                      <%@s.companies[6..8].each do |company| %>
+                      <%@s.sorted_companies[6..8].each do |company| %>
                         <td><%=company[0]%></td>
                       <%end%>
                     </tr>
                     <tr>
-                      <%@s.companies[9..11].each do |company| %>
+                      <%@s.sorted_companies[9..11].each do |company| %>
                         <td><%=company[0]%></td>
                       <%end%>
                     </tr>
                     <tr>
-                      <%@s.companies[12..14].each do |company| %>
+                      <%@s.sorted_companies[12..14].each do |company| %>
                         <td><%=company[0]%></td>
                       <%end%>
                     </tr>
                     <tr>
-                      <%@s.companies[15..17].each do |company| %>
+                      <%@s.sorted_companies[15..17].each do |company| %>
                         <td><%=company[0]%></td>
                       <%end%>
                     </tr>
                     <tr>
-                      <%@s.companies[18..20].each do |company| %>
+                      <%@s.sorted_companies[18..20].each do |company| %>
                         <td><%=company[0]%></td>
                       <%end%>
                     </tr>
                     <tr>
-                      <%@s.companies[21..23].each do |company| %>
+                      <%@s.sorted_companies[21..23].each do |company| %>
                         <td><%=company[0]%></td>
                       <%end%>
                     </tr>
                     <tr>
-                      <%@s.companies[24..26].each do |company| %>
+                      <%@s.sorted_companies[24..26].each do |company| %>
                         <td><%=company[0]%></td>
                       <%end%>
                     </tr>
