@@ -91,45 +91,86 @@
             var citymap = {};
               citymap['flatiron_school'] = {
                 center: new google.maps.LatLng(40.705313, -74.013911),
-                population: 15
+                population: 8
               };
-              citymap['etsy'] = {
-                center: new google.maps.LatLng(40.702858, -73.989392),
-                population: 5
+              citymap['xo_group'] = {
+                center: new google.maps.LatLng(40.710797, -74.009526),
+                population: 2
+              };
+              citymap['alpha_sights'] = {
+                center: new google.maps.LatLng(40.757471, -73.987732),
+                population: 2
+              };
+              citymap['lifebooker'] = {
+                center: new google.maps.LatLng(40.703063, -73.990460),
+                population: 2
+              };
+              citymap['redowl_analytics'] = {
+                center: new google.maps.LatLng(40.708876, -74.006689),
+                population: 2
+              };
+              citymap['paperless_post'] = {
+                center: new google.maps.LatLng(40.708882, -74.011433),
+                population: 2
+              };
+              citymap['fog_creek'] = {
+                center: new google.maps.LatLng(40.706780, -74.012596),
+                population: 1
               };
               citymap['time_inc'] = {
                 center: new google.maps.LatLng(40.760438, -73.980764),
-                population: 10
+                population: 2
               };
               citymap['new_york_times'] = {
                 center: new google.maps.LatLng(40.756205, -73.989914),
-                population: 10
+                population: 1
               };
-              citymap['art_sy'] = {
-                center: new google.maps.LatLng(40.718837, -74.002667),
-                population: 5
+              citymap['wsj'] = {
+                center: new google.maps.LatLng(40.756670, -73.983168),
+                population: 1
               };
-              citymap['percolate'] = {
-                center: new google.maps.LatLng(40.720982, -74.001378),
-                population: 5
+              citymap['maker_bot'] = {
+                center: new google.maps.LatLng(40.725134, -73.994578),
+                population: 1
               };
               citymap['constant_contact'] = {
                 center: new google.maps.LatLng(40.763451, -73.986866),
-                population: 3
+                population: 1
+              };
+              citymap['buzzfeed'] = {
+                center: new google.maps.LatLng(40.742021, -73.989928),
+                population: 1
+              };
+              citymap['crush_and_lovely'] = {
+                center: new google.maps.LatLng(40.718608, -73.997415),
+                population: 1
+              };
+              citymap['jcrew'] = {
+                center: new google.maps.LatLng(40.730769, -73.991322),
+                population: 1
+              };
+              citymap['venmo'] = {
+                center: new google.maps.LatLng(40.731327, -74.008577),
+                population: 1
+              };
+              citymap['greenhouse_software'] = {
+                center: new google.maps.LatLng(40.714417, -74.007262),
+                population: 1
+              };
+              citymap['contently'] = {
+                center: new google.maps.LatLng(40.725040, -73.996833),
+                population: 1
+              };
+              citymap['yellowhammer'] = {
+                center: new google.maps.LatLng(40.753685, -73.999164),
+                population: 1
+              };
+              citymap['sevenfifty'] = {
+                center: new google.maps.LatLng(40.742811, -74.006826),
+                population: 1
               };
 
             var cityCircle;
-
-            // Define your locations: HTML content for the info window, latitude, longitude
-            var locations = [
-              ['<h4>The Flatiron School</h4>11 Broadway, New York<br>Currently, <b>20</b> Flatiron alums work here.</p></br>', 40.705313, -74.013911],
-              ['<h4>Etsy</h4><br>55 Washington Street, Brooklyn</br>Currently, <b>5</b> Flatiron alums work here.</p>', 40.702858, -73.989392],
-              ['<h4>Time, Inc.</h4><br>55 Washington Street, Brooklyn</br>Currently, <b>5</b> Flatiron alums work here.</p>', 40.760438, -73.980764],
-              ['<h4>The New York Times</h4><br>55 Washington Street, Brooklyn</br>Currently, <b>5</b> Flatiron alums work here.</p>', 40.756205, -73.989914],
-              ['<h4>Artsy</h4><br>55 Washington Street, Brooklyn</br>Currently, <b>5</b> Flatiron alums work here.</p>', 40.718837, -74.002667],
-              ['<h4>Percolate</h4><br>55 Washington Street, Brooklyn</br>Currently, <b>5</b> Flatiron alums work here.</p>', 40.720982, -74.001378],
-              ['<h4>Constant Contact</h4><br>55 Washington Street, Brooklyn</br>Currently, <b>5</b> Flatiron alums work here.</p>', 40.763451, -73.986866]
-            ];
 
 
         // Initialize method:
@@ -160,7 +201,7 @@
                   fillOpacity: 0.35,
                   map: map,
                   center: citymap[city].center,
-                  radius: Math.sqrt(citymap[city].population) * 250
+                  radius: Math.sqrt(citymap[city].population) * 300
                 };
 
 
@@ -194,7 +235,7 @@
     </div>
 
     <div class="ribbon l-box-lrg pure-g">
-        <h2 class="content-head content-head-ribbon">Flatiron Industries</h2>
+        <h2 class="content-head content-head-ribbon">What Industries Do Graduates Work In?</h2>
         <!-- <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
  -->            <!-- <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5"> -->
                <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -247,8 +288,7 @@
         <div class="pure-g">
           <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
 <!--             <div class="content"> -->
-          <h1 class="content-head is-center">Job Placement</h1>
-          <h1> </h1>
+          <h1 class="content-head is-center">What Happens After Flatiron?</h1>
           <script type="text/javascript" src="https://www.google.com/jsapi"></script>
               <script type="text/javascript">
                 google.load("visualization", "1", {packages:["bar"]});
@@ -281,14 +321,64 @@
                   chart.draw(data, options);
                 }
               </script>
-              <h3 class="content-head is-center">What Our Alumni Currently Do:</h3>
+              <h3 class="content-head is-center">What Flatiron Graduates Currently Do:</h3>
               <div id="bar_chart" style="width:80%;height:450px;margin:auto"></div>
+              <div class="content">
+              <h3 class="content-head is-center">Where Flatiron Graduates Currently Work:</h3>
+              <div id="contentBox" style="margin:0px auto; width:100%">
+                <div class="container">
+                  <div class="table">
+                  <table style="width:100%">
+                    <tr>
+                      <th>Flatiron School</th>
+                      <th>XO Group Inc.</th> 
+                      <th>AlphaSights</th>
+                    </tr>
+                    <tr>
+                      <td>Flatiron Labs</td>
+                      <td>Lifebooker</td> 
+                      <td>WSJ.com</td>
+                    </tr>
+                    <tr>
+                      <td>Paperless Post</td>
+                      <td>Time Inc.</td> 
+                      <td>YCharts</td>
+                    </tr>
+                    <tr>
+                      <td>Dow Jones</td>
+                      <td>Buzzfeed</td> 
+                      <td>Venmo</td>
+                    </tr>
+                    <tr>
+                      <td>Constant Contact</td>
+                      <td>J.Crew</td> 
+                      <td>YellowHammer</td>
+                    </tr>
+                    <tr>
+                      <td>Contently</td>
+                      <td>MakerBot®</td> 
+                      <td>RedOwl Analytics</td>
+                    </tr>
+                    <tr>
+                      <td>Crush & Lovely</td>
+                      <td>Boeing Company</td> 
+                      <td>New York Times</td>
+                    </tr>
+                    <tr>
+                      <td>Fog Creek Software</td>
+                      <td>Greenhouse Software, Inc.</td> 
+                      <td>Carrot - a VICE company</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
             </div>
-            <div class="content">
-            <div class="pure-g">
-              <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
-              <h3 class="content-head is-center">Want to get involved with The Flatiron School?</h3>
-                <p></p>
+
+
+              </div>
+            </div>
+            <div class="ribbon l-box-lrg pure-g">
+                <h3 class="content-head content-head-ribbon">Want to get involved with The Flatiron School?</h3>
                 <p class="content-head is-center">Become a <a href="http://flatironschool.com/hire.html">hiring partner</a> or <a href="http://go.flatironschool.com/apply">apply</a> to The Flatiron School today!</p>
             </div>
         </div>
@@ -297,7 +387,7 @@
 
 
     <div class="footer l-box is-center">
-        Flatiron Circles was created with   &#9829;   by Sam Van Tran & Vaidehi Joshi, Ruby-006.
+        <h5>Flatiron Circles was created with   &#9829;   by Sam Van Tran & Vaidehi Joshi, Ruby-006.</h5>
     </div>
 
 </div>

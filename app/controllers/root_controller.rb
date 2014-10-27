@@ -1,5 +1,7 @@
 class RootController < ApplicationController
   
+  resources :index
+
   get '/' do
     # erb :index
     erb :homepage
@@ -7,6 +9,10 @@ class RootController < ApplicationController
 
   get '/index' do
     
+  end
+
+  get '/index.html' do
+    erb :index
   end
 
   post '/make-magic' do 

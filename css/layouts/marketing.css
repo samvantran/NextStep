@@ -222,7 +222,7 @@ a.pure-button-primary {
 }
 
 .content-head a:hover {
-    color: black
+    color: white
 }
 
 
@@ -246,9 +246,43 @@ a.pure-button-primary {
     color: #aaa;
 }
 
+.column-left{ float: left; width: 33%; }
+.column-right{ float: right; width: 33%; }
+.column-center{ display: inline-block; width: 33%; }
+
 /* This is the class used for the footer */
 .footer {
-    background: #111;
+    background: #1f8dd6;
+}
+
+.footer h5 {
+    color: #FFFFFF;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin: 1em 0 1em;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 0.1em
+}
+
+table {
+    margin: 0px 0px 0px 20px;
+}
+
+th {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #1f8dd6;
+    font-weight: 100;
+}
+
+td {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #1f8dd6;
+    font-weight: 100;
 }
 
 /*
@@ -299,6 +333,9 @@ a.pure-button-primary {
     }
 
 }
+
+
+
 
 /*
  * -- DESKTOP (AND UP) MEDIA QUERIES --
