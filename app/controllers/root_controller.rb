@@ -5,6 +5,7 @@ class RootController < ApplicationController
   end
 
   get '/test' do
+    @s = Seed.new
     erb :"display_magic.html"
   end
 
