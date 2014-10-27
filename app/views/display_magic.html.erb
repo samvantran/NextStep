@@ -560,7 +560,7 @@
                                           1: {offset: 0.2},
                                           2: {offset: 0.2}
                                 },
-                      legend: {position: 'left', textStyle: {color: 'black', fontSize: 12}}
+                      legend: {position: 'left', textStyle: {color: 'black', fontSize: 15}}
                     };
 
                     var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
@@ -568,7 +568,7 @@
                   }
 
                 </script>
-            <div id="piechart_3d" style="width: 800px; height: 500px;margin:auto"></div>
+            <div id="piechart_3d" style="width: 900px; height: 500px;margin:auto"></div>
         <!-- </div> -->
       </div>
         <div class="content">
@@ -583,18 +583,9 @@
                 function drawChart() {
                   var data = google.visualization.arrayToDataTable([
                     ['Job Title', 'Number of Alumni', { role: 'style' }],
-                    ['Ruby Developer', 2,  'color: #1f8dd6'],
-                    ['Front-End Developer', 1,  'color: #1f8dd6'],
-                    ['Web Dev Fellow', 2,  'color: #1f8dd6'],
-                    ['iOS Engineer', 1,  'color: #1f8dd6'],
-                    ['Software Developer', 6, 'color: #1f8dd6'],
-                    ['Developer', 5,  'color: #1f8dd6'],
-                    ['iOS Developer', 4,  'color: #1f8dd6'],
-                    ['Full-Stack Developer', 8,  'color: #1f8dd6'],
-                    ['Software Apprentice', 2,  'color: #1f8dd6'] ,
-                    ['Product Manager', 2,  'color: #1f8dd6'],
-                    ['Backend Engineer', 1,  'color: #1f8dd6'],
-                    ['Web Engineer', 2,  'color: #1f8dd6']
+                    <% @s.titles[0..9].each do |title| %>
+                      <%= [title[0], title[1], 'color: #1f8dd6'] %>,
+                    <% end %>
                     ]);
 
                   var options = {
@@ -617,44 +608,49 @@
                   <div class="table">
                   <table style="width:100%">
                     <tr>
-                      <th>Flatiron School</th>
-                      <th>XO Group Inc.</th> 
-                      <th>AlphaSights</th>
+                      <%@s.companies[0..2].each do |company| %>
+                        <td><%=company[0]%></td>
+                      <%end%>
                     </tr>
                     <tr>
-                      <td>Flatiron Labs</td>
-                      <td>Lifebooker</td> 
-                      <td>WSJ.com</td>
+                      <%@s.companies[3..5].each do |company| %>
+                        <td><%=company[0]%></td>
+                      <%end%>
                     </tr>
                     <tr>
-                      <td>Paperless Post</td>
-                      <td>Time Inc.</td> 
-                      <td>YCharts</td>
+                      <%@s.companies[6..8].each do |company| %>
+                        <td><%=company[0]%></td>
+                      <%end%>
                     </tr>
                     <tr>
-                      <td>Dow Jones</td>
-                      <td>Buzzfeed</td> 
-                      <td>Venmo</td>
+                      <%@s.companies[9..11].each do |company| %>
+                        <td><%=company[0]%></td>
+                      <%end%>
                     </tr>
                     <tr>
-                      <td>Constant Contact</td>
-                      <td>J.Crew</td> 
-                      <td>YellowHammer</td>
+                      <%@s.companies[12..14].each do |company| %>
+                        <td><%=company[0]%></td>
+                      <%end%>
                     </tr>
                     <tr>
-                      <td>Contently</td>
-                      <td>MakerBot®</td> 
-                      <td>RedOwl Analytics</td>
+                      <%@s.companies[15..17].each do |company| %>
+                        <td><%=company[0]%></td>
+                      <%end%>
                     </tr>
                     <tr>
-                      <td>Crush & Lovely</td>
-                      <td>Boeing Company</td> 
-                      <td>New York Times</td>
+                      <%@s.companies[18..20].each do |company| %>
+                        <td><%=company[0]%></td>
+                      <%end%>
                     </tr>
                     <tr>
-                      <td>Fog Creek Software</td>
-                      <td>Greenhouse Software, Inc.</td> 
-                      <td>Carrot - a VICE company</td>
+                      <%@s.companies[21..23].each do |company| %>
+                        <td><%=company[0]%></td>
+                      <%end%>
+                    </tr>
+                    <tr>
+                      <%@s.companies[24..26].each do |company| %>
+                        <td><%=company[0]%></td>
+                      <%end%>
                     </tr>
                   </table>
                 </div>
