@@ -58,17 +58,6 @@
 
 
 
-<div class="header">
-    <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
-        <a class="pure-menu-heading" href="">Flatiron Circles</a>
-
-        <ul>
-            <li class="pure-menu-selected"><a href="#">Home</a></li>
-            <li><a href="#">Tour</a></li>
-            <li><a href="#">Sign Up</a></li>
-        </ul>
-    </div>
-</div>
 
 <div class="splash-container">
     <div class="splash">
@@ -83,9 +72,9 @@
 </div>
 
 <div class="content-wrapper">
-    <div class="content">
-        <h2 class="content-head is-center">Where do Flatiron graduates end up?</h2>
-
+      <div class="pure-g">
+        <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
+      <h1 class="content-head is-center">Where do Flatiron graduates end up?</h1>
         <script type="text/javascript"></script>
         <style>
             html, body, #map-canvas {
@@ -142,16 +131,6 @@
               ['<h4>Constant Contact</h4><br>55 Washington Street, Brooklyn</br>Currently, <b>5</b> Flatiron alums work here.</p>', 40.763451, -73.986866]
             ];
 
-            var icons = [{
-                path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
-                 fillColor: '#',
-                 fillOpacity: 0.8,
-                 scale: 7,
-                 strokeColor: '',
-                 strokeWeight: 0.3
-             }]
-
-             var icons_length = icons.length;
 
         // Initialize method:
             function initialize() {
@@ -211,34 +190,6 @@
 
         <div class="pure-g">
             <div id="chart_div" style="width: 200px; height: 50px;"></div>
-<!--             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-
-                <h3 class="content-subhead">
-                    <i class="fa fa-th-large"></i>
-                    Flatiron Industries
-                </h3>
-                <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-                </p>
-            </div>
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-                <h3 class="content-subhead">
-                    <i class="fa fa-th-large"></i>
-                    Responsive Layouts
-                </h3>
-                <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-                </p>
-            </div>
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-                <h3 class="content-subhead">
-                    <i class="fa fa-th-large"></i>
-                    Modular
-                </h3>
-                <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-                </p>
-            </div> -->
         </div>
     </div>
 
@@ -291,41 +242,59 @@
                 </script>
             <div id="piechart_3d" style="width: 800px; height: 500px;margin:auto"></div>
         <!-- </div> -->
-<!--         </div> -->
-    </div>
-
-    <div class="content">
-        <h2 class="content-head is-center">Dolore magna aliqua. Uis aute irure.</h2>
-
+      </div>
+        <div class="content">
         <div class="pure-g">
-            <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
-                <form class="pure-form pure-form-stacked">
-                    <fieldset>
+          <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
+<!--             <div class="content"> -->
+          <h1 class="content-head is-center">Job Placement</h1>
+          <h1> </h1>
+          <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+              <script type="text/javascript">
+                google.load("visualization", "1", {packages:["bar"]});
+                google.setOnLoadCallback(drawChart);
+                function drawChart() {
+                  var data = google.visualization.arrayToDataTable([
+                    ['Job Title', 'Number of Alumni', { role: 'style' }],
+                    ['Ruby Developer', 2,  'color: #1f8dd6'],
+                    ['Front-End Developer', 1,  'color: #1f8dd6'],
+                    ['Web Dev Fellow', 2,  'color: #1f8dd6'],
+                    ['iOS Engineer', 1,  'color: #1f8dd6'],
+                    ['Software Developer', 6, 'color: #1f8dd6'],
+                    ['Developer', 5,  'color: #1f8dd6'],
+                    ['iOS Developer', 4,  'color: #1f8dd6'],
+                    ['Full-Stack Developer', 8,  'color: #1f8dd6'],
+                    ['Software Apprentice', 2,  'color: #1f8dd6'] ,
+                    ['Product Manager', 2,  'color: #1f8dd6'],
+                    ['Backend Engineer', 1,  'color: #1f8dd6'],
+                    ['Web Engineer', 2,  'color: #1f8dd6']
+                    ]);
 
-                        <label for="name">Your Name</label>
-                        <input id="name" type="text" placeholder="Your Name">
+                  var options = {
+                           hAxis: {title: 'Job Title Frequency',  titleTextStyle: {color: '#1f8dd6'}},
+                           legend: { position: "none" },
+                           bar: {groupWidth: "95%"}
+                         };
 
+                  var chart = new google.visualization.BarChart(document.getElementById('bar_chart'));
 
-                        <label for="email">Your Email</label>
-                        <input id="email" type="email" placeholder="Your Email">
-
-                        <label for="password">Your Password</label>
-                        <input id="password" type="password" placeholder="Your Password">
-
-                        <button type="submit" class="pure-button">Sign Up</button>
-                    </fieldset>
-                </form>
+                  chart.draw(data, options);
+                }
+              </script>
+              <h3 class="content-head is-center">What Our Alumni Currently Do:</h3>
+              <div id="bar_chart" style="width:80%;height:450px;margin:auto"></div>
             </div>
-
-
             <div class="content">
-                    <h3 class="content-head is-center">Want to get involved with The Flatiron School?</h3>
-                    <p></p>
-                    <p class="content-head is-center">Become a <a href="http://flatironschool.com/hire.html">hiring partner</a> or <a href="http://go.flatironschool.com/apply">apply</a> to The Flatiron School today!</p>
+            <div class="pure-g">
+              <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
+              <h3 class="content-head is-center">Want to get involved with The Flatiron School?</h3>
+                <p></p>
+                <p class="content-head is-center">Become a <a href="http://flatironschool.com/hire.html">hiring partner</a> or <a href="http://go.flatironschool.com/apply">apply</a> to The Flatiron School today!</p>
             </div>
         </div>
-
+      </div>
     </div>
+
 
     <div class="footer l-box is-center">
         Flatiron Circles was created with   &#9829;   by Sam Van Tran & Vaidehi Joshi, Ruby-006.

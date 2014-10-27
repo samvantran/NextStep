@@ -6,13 +6,13 @@ class RootController < ApplicationController
   end
 
   get '/index' do
-    redirect 'index.html'
+    
   end
 
   post '/make-magic' do 
     run_session = LinkedInSession.new
     @s = run_session.work_magic
-    erb :index
+    erb :magic_display
   end
 
   get '/flatiron_alums' do
