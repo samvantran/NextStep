@@ -1,12 +1,18 @@
 class RootController < ApplicationController
   
+  resources :index
+
   get '/' do
     # erb :index
     erb :homepage
   end
 
   get '/index' do
-    redirect 'index.html'
+    # index.html.erb why you no load????
+  end
+
+  get '/index.html' do
+    erb :index
   end
 
   post '/make-magic' do 
