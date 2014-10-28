@@ -3,6 +3,8 @@ class Seed
   attr_reader :sorted_titles, :sorted_companies, :sorted_industries, :sorted_locations, :company_name
 
    def initialize
+      @company_name = "The Flatiron School"
+      
       @sorted_companies=
         [["Flatiron School", 6],
          ["XO Group Inc.", 2],

@@ -3,12 +3,12 @@ require './config/environment.rb'
 class LinkedInSession 
   attr_reader :b, :s, :company_name
 
-  def initialize(company_name, new_session = true)
+  def initialize(company_name)
     @company_name = company_name
-    login_to_linkedin if new_session == true
   end
 
   def work_magic
+    login_to_linkedin
     search_for_alumni(@company_name)
     scrape_for_gold
     sort_data
@@ -39,11 +39,12 @@ class LinkedInSession
 
   def scrape_for_gold
     sleep 1.5
-    9.times do
-      # while b.link(:title => "Next Page").exists? (LinkedIn caps 100 max profile views)
-      s.scrape(b.html)
-      b.link(:title => "Next Page").click
-      sleep 1.2 + rand(1..10)/50
+    9.times do                                  # (LinkedIn caps 100 max profile views)
+      if b.link(:title => "Next Page").exists? 
+        s.scrape(b.html)
+        b.link(:title => "Next Page").click
+        sleep 1.2 + rand(1..10)/50
+      end
     end
     s.scrape(b.html) # one last time
   end
