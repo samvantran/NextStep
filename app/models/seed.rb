@@ -1,8 +1,9 @@
-class Seed
-   attr_reader :companies, :titles, :industries, :locations
+class Seed   
+  attr_accessor :titles, :companies, :industries, :locations
+  attr_reader :sorted_titles, :sorted_companies, :sorted_industries, :sorted_locations, :company_name
 
    def initialize
-      @companies=
+      @sorted_companies=
         [["Flatiron School", 6],
          ["XO Group Inc.", 2],
          ["AlphaSights", 2],
@@ -60,7 +61,7 @@ class Seed
          [nil, 1],
          ["BlackRock", 1]]
 
-      @titles=
+      @sorted_titles=
         [["Software Engineer", 17],
          ["Web Developer", 7],
          ["Software Developer", 6],
@@ -120,7 +121,7 @@ class Seed
          ["Junior Web Developer", 1],
          ["Full-Stack Developer", 1]]
 
-      @industries=
+      @sorted_industries=
         [["Computer Software", 40],
          ["Internet", 33],
          ["Information Technology and Services", 7],
@@ -140,7 +141,7 @@ class Seed
          ["Media Production", 1],
          ["Higher Education", 1]]
 
-      @locations=
+      @sorted_locations=
        [["Greater New York City Area", 99]]
     end
 

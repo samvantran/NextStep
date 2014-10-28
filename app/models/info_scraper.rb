@@ -3,13 +3,15 @@ require './config/environment.rb'
 class InfoScraper
 
   attr_accessor :titles, :companies, :industries, :locations
-  attr_reader :sorted_titles, :sorted_companies, :sorted_industries, :sorted_locations
+  attr_reader :sorted_titles, :sorted_companies, :sorted_industries, :sorted_locations, :company_name
 
-  def initialize
+  def initialize(company_name)
+    @company_name = company_name
     @titles = {}
     @companies = {}
     @industries = {}
     @locations = {}
+    @coordinate = []
   end
 
   def scrape(html)

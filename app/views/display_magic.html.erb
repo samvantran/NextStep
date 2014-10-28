@@ -150,7 +150,6 @@
         color: #AECFE5;
     }
 
-
     /*
      * -- SPLASH STYLES --
      * This is the blue top section that appears on the page.
@@ -374,7 +373,7 @@
     <div class="splash">
       <h1 class="splash-head">NextStep</h1>
       <p class="splash-subhead">
-          Following the Flatiron journey, one step at a time
+          Following the <%= @run_session.company_name %> journey, one step at a time
       </p>
       <p>
           <a href="http://www.flatironschool.com" class="pure-button pure-button-primary">Made with   &#9829;   at The Flatiron School</a>
@@ -385,7 +384,7 @@
   <div class="content-wrapper">
       <div class="pure-g">
         <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
-      <h1 class="content-head is-center">Where do Flatiron graduates end up?</h1>
+      <h1 class="content-head is-center">Where do <%= @run_session.company_name %> graduates end up?</h1>
         <script type="text/javascript"></script>
         <style>
             html, body, #map-canvas {
@@ -535,7 +534,7 @@
     </div>
 
     <div class="ribbon l-box-lrg pure-g">
-        <h2 class="content-head content-head-ribbon">What Industries Do Graduates Work In?</h2>
+        <h2 class="content-head content-head-ribbon">What Industries Do <%= @run_session.company_name %> Graduates Work In?</h2>
         <!-- <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
  -->            <!-- <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5"> -->
                <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -546,7 +545,7 @@
 
                     var data = google.visualization.arrayToDataTable([
                       ['Industry', 'Number of Alumni'],
-                      <% @s.industries.each do |industry| %>
+                      <% @s.sorted_industries.each do |industry| %>
                       <%= industry %>,
                       <% end %>
                     ]);
@@ -572,7 +571,7 @@
         <div class="pure-g">
           <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
 <!--             <div class="content"> -->
-          <h1 class="content-head is-center">What Happens After Flatiron?</h1>
+          <h1 class="content-head is-center">What Happens After <%= @run_session.company_name %>?</h1>
           <script type="text/javascript" src="https://www.google.com/jsapi"></script>
               <script type="text/javascript">
                 google.load("visualization", "1", {packages:["bar"]});
@@ -596,10 +595,10 @@
                   chart.draw(data, options);
                 }
               </script>
-              <h3 class="content-head is-center">What Flatiron Graduates Currently Do:</h3>
+              <h3 class="content-head is-center">What <%= @run_session.company_name %> Graduates Currently Do:</h3>
               <div id="bar_chart" style="width:80%;height:450px;margin:auto"></div>
               <div class="content">
-              <h3 class="content-head is-center">Where Flatiron Graduates Currently Work:</h3>
+              <h3 class="content-head is-center">Where <%= @run_session.company_name %> Graduates Currently Work:</h3>
               <div id="contentBox" style="margin:0px auto; width:100%">
                 <div class="container">
                   <div class="table">
@@ -661,9 +660,22 @@
                 <h3 class="content-head content-head-ribbon">Want to get involved with The Flatiron School?</h3>
                 <p class="content-head is-center">Become a <a href="http://flatironschool.com/hire.html">hiring partner</a> or <a href="http://go.flatironschool.com/apply">apply</a> to The Flatiron School today!</p>
             </div>
+          </br>
+            <div class="ribbon l-box pure-g" style="background-color: #747c81;">
+              <h3 class="content-head content-head-ribbon">Want to search a different company?</h3>
+              <p class="content-head is-center" style="color: white;">Just type in a new company name below and click submit</p>
+              <form action="/rerun-magic" method="post" style="text-align: center;">
+              <input type="text" name="company_name" style="border: 2px solid #ddd;
+        box-shadow: none; font-size: 100%; height:42px; width: 25%; margin: 1em;" >
+              <button type="submit" class="pure-button pure-button-primary" style="background-color: #1f8dd6;
+        color: white; padding: 0.5em 2em; border-radius: 5px; background: white; color: #1f8dd6; font-size: 120%; text-decoration:none;">Re-Run the Magic!</button>
+            </div>
+            </form>
         </div>
       </div>
     </div>
+
+
 
 
     <div class="footer l-box is-center">
