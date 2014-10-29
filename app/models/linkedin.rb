@@ -13,6 +13,7 @@ class LinkedInSession
     scrape_for_gold
     sort_data
     # add_geo_data
+    close_linkedin
     @s
   end
 
@@ -24,6 +25,10 @@ class LinkedInSession
     b.text_field(:id => 'session_password-login').set 'applepies!'
     sleep 1 + rand(1..10)/50
     b.input(:id => 'signin').click
+  end
+
+  def close_linkedin
+    b.close
   end
 
   def search_for_alumni(company)
