@@ -26,7 +26,7 @@ class InfoScraper
   end
 
   def grab_title(person)
-    title = person.css("div.bd p.description").text.split(" at ")[0]
+    title = person.css("div.bd div.description").text.split(" at ")[0]
     if title
       titles[title] ? titles[title] += 1 : titles[title] = 1
     end
@@ -37,7 +37,7 @@ class InfoScraper
   end
 
   def grab_company(person)
-    company = person.css("div.bd p.description").text.split(" at ")[1]
+    company = person.css("div.bd div.description").text.split(" at ")[1]
     company.gsub!("The ", "") if company
     company != nil && companies[company] ? companies[company] += 1 : companies[company] = 1
   end

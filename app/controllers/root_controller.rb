@@ -11,6 +11,7 @@ class RootController < ApplicationController
 
   get '/make-magic' do 
     @s = LinkedInSession.new("The Flatiron School").work_magic
+    session[:user] = @s
     erb :"display_magic.html"
   end
 
