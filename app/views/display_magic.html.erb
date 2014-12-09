@@ -402,7 +402,7 @@
 
         <% @s.sorted_companies.each do |company| %>
           <% if !company[2].nil? %>
-          citymap["<%= company[0].gsub(" ", "_") %>"] = {
+          citymap["<%= company[0] %>"] = {
             center: new google.maps.LatLng(<%= company[2] %>, <%= company[3] %>),
             population: <%= company[1] %>
           };
@@ -415,7 +415,7 @@
         function initialize() {
 
           var mapOptions = {
-            zoom: 11,
+            zoom: 13,
             center: new google.maps.LatLng(<%= @s.sorted_companies.first[2] %>, <%= @s.sorted_companies.first[3] %>),
             mapTypeId: google.maps.MapTypeId.TERRAIN,
             mapTypeControl: false,
@@ -438,7 +438,7 @@
               fillOpacity: 0.35,
               map: map,
               center: citymap[city].center,
-              radius: Math.sqrt(citymap[city].population) * 300
+              radius: Math.sqrt(citymap[city].population) * 600
             };
 
             cityCircle = new google.maps.Circle(populationOptions);
